@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # arps2mm.sh -- A script to convert arp-scan output into MMM-NetworkScanner config file device items
 
-DARP=$(sudo arp-scan -N -l |tail -n +3 |head -n -3 |sort)
+DARP=$(arp-scan -N -l |tail -n +3 |head -n -3 |sort)
 DDEV=""
 
 #echo -e "DEVICE LIST:\n${DARP}\n\n"

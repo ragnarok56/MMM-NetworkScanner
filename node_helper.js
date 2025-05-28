@@ -9,7 +9,7 @@
 
 const NodeHelper = require("node_helper");
 const ping = require("ping");
-const sudo = require("sudo");
+const { spawn } = require("node:child_process");
 
 module.exports = NodeHelper.create({
     
@@ -40,7 +40,7 @@ module.exports = NodeHelper.create({
         var self = this;
         // Target hosts/network supplied in config or entire localnet
         var arpHosts = this.config.network || '-l';
-        var arp = sudo(['arp-scan', '-q', arpHosts]);
+        var arp = spawn('arp-scan', ['-q', arpHosts]);
         var buffer = '';
         var errstream = '';
         var discoveredMacAddresses = [];

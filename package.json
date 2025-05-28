@@ -22,12 +22,6 @@
   },
   "homepage": "https://github.com/ianperrin/MMM-NetworkScanner#readme",
   "dependencies": {
-    "sudo": "^1.0.3",
-    "ping": "^0.1.10"
-  },
-  "devDependencies": {
-      "grunt": "latest",
-      "grunt-contrib-jshint": "latest",
-      "grunt-contrib-nodeunit": "latest"
+    "ping": "^0.4.4"
   }
 }
